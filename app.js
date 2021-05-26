@@ -28,11 +28,13 @@ mongoose
 // app.set('trust proxy', 1) // When using rate limiter
 app.use(cors());
 app.use(helmet());
-app.use(flocBlock()); // F*ck Google 🖕🏻
+app.use(flocBlock());
 app.use(express.json());
 app.use(middleware.tokenExtractor);
 app.use(middleware.requestLogger);
+
 app.use(express.static("build"));
+
 app.use("/api/login", loginRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/products", productsRouter);

@@ -9,7 +9,6 @@ const requestLogger = (request, response, next) => {
 	next();
 
 	// OR, using morgan
-	// // eslint-disable-next-line no-unused-vars
 	// morgan.token("body", (request, response) => JSON.stringify(request.body));
 	// app.use(
 	// 	morgan(
