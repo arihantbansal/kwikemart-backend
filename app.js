@@ -26,7 +26,9 @@ mongoose
 	.catch(err => {
 		logger.error("Error connecting to db", err.message);
 	});
+
 // app.set('trust proxy', 1) // When using rate limiter
+
 app.use(cors());
 app.use(helmet());
 app.use(flocBlock());
