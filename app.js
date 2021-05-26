@@ -11,6 +11,7 @@ const productsRouter = require("./controllers/products");
 const usersRouter = require("./controllers/users");
 const loginRouter = require("./controllers/login");
 const middleware = require("./utils/middleware");
+const path = require("path");
 
 mongoose
 	.connect(config.MONGODB_URI, {
@@ -33,7 +34,16 @@ app.use(express.json());
 app.use(middleware.tokenExtractor);
 app.use(middleware.requestLogger);
 
-app.use(express.static("build"));
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("build"));
+	app.get("/*", (req, res) => {
+		res.sendFile(path.join(__dirname, "build/index.html"), err => {
+			if (err) {
+				res.status(500).send(err);
+			}
+		});
+	});
+}
 
 app.use("/api/login", loginRouter);
 app.use("/api/users", usersRouter);
