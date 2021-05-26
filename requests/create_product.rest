@@ -1,0 +1,10 @@
+POST http://localhost:3002/api/products
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFzd2FydHoiLCJpZCI6IjYwOWFhNjg1MDdjMWM1NWY0NGIyODM4ZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYyMDc0Nzk1M30.pq3zahqCL-7BwJZqfMJ6NB5PI9qJQHtMZkT1nhOP6lA
+
+{
+    "name": "Dell Inspiron 5501",
+	"category": "Electronics",
+	"price": "69990",
+	"quantity": "1"
+}

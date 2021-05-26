@@ -1,0 +1,31 @@
+{
+	"source": {
+		"include": ".",
+		"includePattern": ".js$",
+		"excludePattern": "(node_modules|docs|build)"
+	},
+
+	"plugins": ["plugins/markdown"],
+
+	"opts": {
+		"encoding": "utf8",
+		"readme": "./README.md",
+		"destination": "docs/",
+		"recurse": true,
+		"verbose": true,
+		"template": "./node_modules/clean-jsdoc-theme",
+		"theme_opts": {
+			"theme": "dark",
+			"title": "Invento",
+			"footer": "Made with love by Arihant Bansal",
+			"search": {
+				"shouldSort": true,
+				"threshold": 0.4,
+				"location": 0,
+				"distance": 100,
+				"maxPatternLength": 32,
+				"minMatchCharLength": 1
+			}
+		}
+	}
+}
