@@ -26,11 +26,8 @@ Password: staff
 ## Future Implementation
 
 In the future we plan to:
-* Use Next.js for SSR
-* Add more product categories
-* Improve upon the UI/UX
-* Improve upon the responsive design
 * Improve security measures
+* Enhance authentication measures
 
 ## Team members
 ### Frontend team
